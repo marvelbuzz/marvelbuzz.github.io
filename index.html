@@ -1,97 +1,298 @@
 <!DOCTYPE html>
+
 <html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/w3css/3/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<body>
 
-<!-- Navigation -->
-<nav class="w3-bar w3-black">
-  <a href="Shorts.html" class="w3-button w3-bar-item">Shorts</a>
-  <a href="#https://www.youtube.com/channel/UCwVp39PjRF_KEiJMLoBJL7g" class="w3-button w3-bar-item">Youtube</a>
-  <a href="Cutted video.html" class="w3-button w3-bar-item">Unseen Video</a>
-  <a href="Series.html" class="w3-button w3-bar-item">Series</a>
-  <a href="about.html" class="w3-button w3-bar-item">About</a>
-</nav>
+<head>
+	<title>Marvel Buzz</title>
 
-<!-- Slide Show -->
-<section>
-	<a href="https://youtu.be/Q5lkic7nlvI">
-  <img class="mySlides" src="resuraction.jpg"
-  style="width:100%"></a>
-  
-  <a href="https://youtu.be/Q5lkic7nlvI">
-  <img class="mySlides" src="Witcher.jpg"
-  style="width:100%"><a>
-  
-  <a href="https://youtu.be/QiKFsgl-eQY">
-  <img class="mySlides" src="ainsi bala vida.jpg"
-  style="width:100%"></a>
-  
-  <a href="https://youtu.be/0O23FWthuPY">
-  <img class="mySlides" src="Start a riot.jpg"
-  style="width:100%"></a>
-  
-  <a href="https://youtu.be/rkjsaUUgvhc">
-  <img class="mySlides" src="game over.jpeg"
-  style="width:100%"></a>
-</section>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-<!-- Band Description -->
-<section class="w3-container w3-center w3-content" style="max-width:600px">
-  <h2 class="w3-wide">MARVEL BUZZ</h2>
-  <p class="w3-opacity"><i>Upcoming Video</i></p>
-  <p class="w3-justify"><a href="https://youtu.be/CqOyM1Z7yE0"><img src="PicsArt_05-21-07.37.24.jpg"height="250"width="400"></a></p>
-</section>
+		.navbar {
+			display: flex;
+			align-items: left;
+			justify-content: left;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
 
-<!-- Band Members -->
-<section class="w3-row-padding w3-center w3-light-grey">
-  <article class="w3-third">
-    <p>Captain America</p>
-    <img src="captain.jpg" alt="Random Name" style="width:100%">
-    <p>Harenge to sath mil kar harenge.</p>
-  </article>
-  <article class="w3-third">
-    <p>Iron Man</p>
-    <img src="Ironman.jpg" alt="Random Name" style="width:100%">
-    <p>Hamare jite ji aman.</p>
-  </article>
-  <article class="w3-third">
-    <p>Thor</p>
-    <img src="thor.jpg" alt="Random Name" style="width:100%">
-    <p>Main hu thor,odin ka beta.</p>
-  </article>
-</section>
+		.background {
+			background: rgb(146, 73, 255);
+			background-blend-mode: darken;
+			background-size: cover;
+		}
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-  <a href="https://www.facebook.com/marvelbuzz5"><i class="fa fa-facebook-official"></i></a>
-  <a href="https://www.youtube.com/channel/UCwVp39PjRF_KEiJMLoBJL7g"><i class="fa fa-youtube"></i></a>
-  <a href="#"><i class="fa fa-instagram"></i></a>
+		.nav-list {
+			width: 50%;
+			display: flex;
+			align-items: left;
+		}
 
-  <p class="w3-medium">
-  Powered by <a href="https://www.youtube.com/channel/UCwVp39PjRF_KEiJMLoBJL7g" target="_blank">Marvel Buzz</a>
-  </p>
-</footer>
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-<script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex = 0;
-carousel();
+		.logo img {
+			width: 50px;
+			border-radius: 50px;
+		}
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 3000);
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: left;
+		}
+
+		
+
+		.firstsection {
+			background-color: rgb(255, 255, 255);
+			height: 400px;
+		}
+
+		.secondsection {
+			background-color: rgb(255, 255, 255);
+			height: 100px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			max-width: 200%;
+			margin: auto;
+			height: 100%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
 }
-</script>
 
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+}
+</style>
+</head>
+
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "marvelbuzz.jpg">
+			</div>
+			<li><a href="Shorts.html">Shorts</a></li>
+			<li><a href="https://www.youtube.com/channel/UCwVp39PjRF_KEiJMLoBJL7g">Youtube</a></li>
+			<li><a href="Cutted video.html">Unseen Video</a></li>
+			<li><a href="Series.html">Series</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+	</nav>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				
+				<p class="text-small">
+					<div class="w3-content w3-section" style="max-width:500px">
+						
+						<a href="https://youtu.be/Q5lkic7nlvI">
+						<img class="mySlides" src="resuraction.jpg" style="width:100%"></a>
+
+						<a href="https://youtu.be/Q5lkic7nlvI">
+						<img class="mySlides" src="Witcher.jpg" style="width:100%"></a>
+
+						<a href="https://youtu.be/QiKFsgl-eQY">
+						<img class="mySlides" src="ainsi bala vida.jpg" style="width:100%"></a>
+
+						<a href="https://youtu.be/0O23FWthuPY">
+						<img class="mySlides" src="Start a riot.jpg" style="width:100%"></a>
+
+						<a href="https://youtu.be/rkjsaUUgvhc">
+						<img class="mySlides" src="game over.jpeg" style="width:100%"></a>
+					  </div>
+					  
+					  <script>
+					  var myIndex = 0;
+					  carousel();
+					  
+					  function carousel() {
+						var i;
+						var x = document.getElementsByClassName("mySlides");
+						for (i = 0; i < x.length; i++) {
+						  x[i].style.display = "none";  
+						}
+						myIndex++;
+						if (myIndex > x.length) {myIndex = 1}    
+						x[myIndex-1].style.display = "block";  
+						setTimeout(carousel, 2000); // Change image every 2 seconds
+					  }
+					  </script>
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+<p><br><br>
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-small" id="program"><br>
+					<p align="center"><b>Upcoming Video</b></p>
+				</h1><br>
+				<p class="text-big">
+					<a href="https://youtu.be/CqOyM1Z7yE0"><img src="PicsArt_05-21-07.37.24.jpg"height="250"width="400"></a>
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="paras">
+		
+
+			<p class="sectionSubTag text-small">
+				
+<a href="https://www.facebook.com/marvelbuzz5" class="fa fa-facebook"></a>
+<a href="https://www.youtube.com/channel/UCwVp39PjRF_KEiJMLoBJL7g" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com/Marvel_Buzz_/?igshid=17qcy48teacss" class="fa fa-instagram"></a>
+			</p>
+
+
+		</div>
+
+
+	</section>
+
+	<footer class="background">
+		<p class="text-footer">
+			&copy; Copyright Marvel Buzz
+		</p>
+
+	</footer>
 </body>
+
 </html>
