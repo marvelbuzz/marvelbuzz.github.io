@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-instagram"></i> Instagram Video Downloader</h1>
+            <p>Download Instagram videos, reels & stories instantly!</p>
+        </header>
+
+        <div class="download-form">
+            <div class="input-group">
+                <input type="url" id="videoUrl" placeholder="Paste Instagram video/reel/story URL here..." required>
+                <button id="downloadBtn">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
+            </div>
+            <div class="examples">
+                <p><strong>Example URLs:</strong></p>
+                <div class="example-links">
+                    <span>📱 instagram.com/reel/ABC123/</span>
+                    <span>📹 instagram.com/p/DEF456/</span>
+                    <span>👤 instagram.com/stories/username/</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Extracting video...</p>
+        </div>
+
+        <div class="result" id="result" style="display: none;">
+            <div class="video-preview">
+                <video id="previewVideo" controls></video>
+            </div>
+            <div class="download-buttons">
+                <a id="downloadLink" class="download-btn primary" download>
+                    <i class="fas fa-download"></i>
+                    Download HD Video
+                </a>
+                <a id="downloadAudio" class="download-btn secondary" download>
+                    <i class="fas fa-music"></i>
+                    Download Audio Only
+                </a>
+            </div>
+            <div class="info">
+                <p><strong>Quality:</strong> <span id="videoQuality">HD</span> | 
+                   <strong>Size:</strong> <span id="videoSize">--</span></p>
+            </div>
+        </div>
+
+        <div class="error" id="error" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p id="errorMessage"></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Instagram Downloader. For educational purposes only.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
